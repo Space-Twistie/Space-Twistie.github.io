@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Space Twistie</title>
+		<meta name="description" content="">
+
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Space Twistie">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Space Twistie">
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono">
+
+		<style>* { box-sizing: border-box; }
+/* Defaults */
+:root {
+  --font-family: Ubuntu;
+  --font-family-monospace: Ubuntu Mono;
+}
+
+/* Theme colors */
+:root {
+  --color-gray-20: #e0e0e0;
+  --color-gray-50: #C0C0C0;
+  --color-gray-90: #dad8d8;
+
+  --background-color: #1A1A1A;
+
+  --text-color: #f4f4f4;
+  --text-color-link: #00c8ff;
+  --text-color-link-active: #6969f7;
+  --text-color-link-visited: #00c8ff;
+
+  --syntax-tab-size: 2;
+}
+
+/* Global stylesheet */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+html {
+  overflow-y: scroll;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+p {
+  line-height: 1.5;
+}
+
+li {
+  line-height: 1.5;
+}
+
+a[href] {
+  color: var(--text-color-link);
+  text-decoration: none;
+}
+
+a[href]:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 20px;
+}
+
+.content {
+  max-width: 70em;
+  padding: 0;
+  margin: 0 auto;
+  padding-left: 280px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #1e1e1e;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu__item[href],
+.menu__item[href]:hover {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #C8C8C8;
+}
+
+.menu__subitem[href],
+.menu__subitem[href]:hover {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  padding-left: 16px;
+
+  color: #C8C8C8;
+}
+
+.logo-container {
+  width: 100%;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-img {
+  height: 180px;
+  max-width: 320px;
+}
+
+.text-block {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.content-block {
+  margin-bottom: 20px;
+}
+
+.tech-stack {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stack-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stack-icon__img {
+  margin-bottom: 10px;
+}
+
+.info {
+  display: flex;
+}
+
+.info__img_left {
+  height: 280px;
+  margin-right: 60px;
+}
+
+.info__img_right {
+  height: 280px;
+  margin-left: 60px;
+}
+
+.info__text_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info__text_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+
+.accordion {
+  border-top: 1px solid #525252;
+  border-bottom: 1px solid #525252;
+}
+
+.accordion__summary {
+  height: 48px;
+  padding-top: 12px;
+
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 20px;
+}
+
+.accordion__text {
+  margin-top: 8px;
+}
+
+.text {
+  font-size: 16px;
+}</style>
+	</head>
+	<body>
+    <nav class="menu">
+  <ul>
+    <li><a href="/test" class="menu__item">Space Twistie</a></li>
+    <li><a href="/test" class="menu__item">Team Outsoursing</a></li>
+    <li><a href="/test" class="menu__subitem">How We Work</a></li>
+    <li><a href="/test" class="menu__subitem">What Sets Us Together</a></li>
+    <li><a href="/test" class="menu__item">Audit and Consulting</a></li>
+    <li><a href="/test" class="menu__subitem">Audit</a></li>
+    <li><a href="/test" class="menu__subitem">Consulting</a></li>
+    <li><a href="/test" class="menu__item">About Us</a></li>
+    <li><a href="/test" class="menu__subitem">Who We Are</a></li>
+    <li><a href="/test" class="menu__subitem">Our Mission</a></li>
+    <li><a href="/test" class="menu__item">Contact Us</a></li>
+  </ul>
+</nav>
+    <div class="content">
+      <header class="logo-container">
+        <img src="img/logo.svg" class="logo-img" />
+      </header>
+
+      <main id="skip">
+        
+
+
+
+<div class="text-block">
+	Space Twistie develops custom web applications of any complexity to meet your unique business needs. We specialize in outsourcing services and provide expert assistance to help you achieve your goals.
+</div>
+
+<div class="text-block">
+	<h1>Our Technology Stack</h1>
+	<p class="text">We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
+</div>
+
+<div class="tech-stack content-block">
+	
+<span class="stack-icon">
+  <img src="img/js-logo.svg" class="stack-icon__img" title="JavaScript logo">
+  <div>
+    JavaScript 
+  </div>
+</span>
+
+	
+<span class="stack-icon">
+  <img src="img/ts-logo.svg" class="stack-icon__img" title="TypeScript logo">
+  <div>
+    TypeScript 
+  </div>
+</span>
+
+	
+<span class="stack-icon">
+  <img src="img/node-js-logo.svg" class="stack-icon__img" title="Node.js logo">
+  <div>
+    Node.js 
+  </div>
+</span>
+
+	
+<span class="stack-icon">
+  <img src="img/react-logo.svg" class="stack-icon__img" title="React.js logo">
+  <div>
+    React.js 
+  </div>
+</span>
+
+	
+<span class="stack-icon">
+  <img src="img/vue-logo.svg" class="stack-icon__img" title="Vue.js logo">
+  <div>
+    Vue.js 
+  </div>
+</span>
+
+	
+<span class="stack-icon">
+  <img src="img/java-logo.svg" class="stack-icon__img" title="Java logo">
+  <div>
+    Java 
+  </div>
+</span>
+
+	
+<span class="stack-icon">
+  <img src="img/kotlin-logo.svg" class="stack-icon__img" title="Kotlin logo">
+  <div>
+    Kotlin 
+  </div>
+</span>
+
+	
+<span class="stack-icon">
+  <img src="img/spring-logo.svg" class="stack-icon__img" title="Spring logo">
+  <div>
+    Spring 
+  </div>
+</span>
+
+</div>
+
+<div class="content-block">
+  <div class="content-block">
+    
+<div class="info">
+  
+  <img src="img/team-outsoursing.png" class="info__img_left"/>
+  
+  <span class="info__text_left">
+    <h1>Team Outsourcing</h1>
+    <p class="text">We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
+  </span>
+  
+</div>
+
+  </div>
+  <details class="accordion">
+  <summary class="accordion__summary">
+    How We Work
+  </summary>
+  <div class="accordion__text">
+    
+    <h1>test</h1>
+  
+  </div>
+</details>
+  <details class="accordion">
+  <summary class="accordion__summary">
+    What Sets Us Apart
+  </summary>
+  <div class="accordion__text">
+    
+    <h1>test</h1>
+  
+  </div>
+</details>
+</div>
+
+<div class="content-block">
+  <div class="content-block">
+    
+<div class="info">
+  
+  <span class="info__text_right">
+    <h1>Audit and Consulting</h1>
+    <p class="text">We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
+  </span>
+  
+  <img src="img/audit-and-consulting.png" class="info__img_right"/>
+  
+</div>
+
+  </div>
+  <details class="accordion">
+  <summary class="accordion__summary">
+    Audit
+  </summary>
+  <div class="accordion__text">
+    
+    <h1>test</h1>
+  
+  </div>
+</details>
+  <details class="accordion">
+  <summary class="accordion__summary">
+    Consulting
+  </summary>
+  <div class="accordion__text">
+    
+    <h1>test</h1>
+  
+  </div>
+</details>
+</div>
+
+<div class="content-block">
+  <div class="content-block">
+    
+<div class="info">
+  
+  <img src="img/about-us.png" class="info__img_left"/>
+  
+  <span class="info__text_left">
+    <h1>About Us</h1>
+    <p class="text">We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
+  </span>
+  
+</div>
+
+  </div>
+  <details class="accordion">
+  <summary class="accordion__summary">
+    Who we are
+  </summary>
+  <div class="accordion__text">
+    
+    <h1>test</h1>
+  
+  </div>
+</details>
+  <details class="accordion">
+  <summary class="accordion__summary">
+    Our Mission
+  </summary>
+  <div class="accordion__text">
+    
+    <h1>test</h1>
+  
+  </div>
+</details>
+</div>
+
+
+<div class="text-block">
+	<h1>Contact Us</h1>
+	<p class="text">We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
+</div>
+
+      </main>
+
+      <footer></footer>
+    </div>
+	</body>
+</html>
