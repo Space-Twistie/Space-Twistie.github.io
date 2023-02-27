@@ -1,0 +1,14 @@
+{% macro info(imgSrc, title, text, direction = "left") %}
+<div class="info">
+  {% if direction == "left" %}
+  <img src="{{ imgSrc }}" class="info__img_left"/>
+  {% endif %}
+  <span class="info__text_{{ direction }}">
+    <h1>{{ title }}</h1>
+    <p class="text">{{ text }}</p>
+  </span>
+  {% if direction == "right" %}
+  <img src="{{ imgSrc }}" class="info__img_right"/>
+  {% endif %}
+</div>
+{% endmacro %}
