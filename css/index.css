@@ -29,7 +29,9 @@ body {
 }
 
 h1,
-h2 {
+h2,
+b,
+strong {
   color: var(--title-text-color);
 }
 
