@@ -20,18 +20,14 @@
 
 /* Theme colors */
 :root {
-  --color-gray-20: #e0e0e0;
-  --color-gray-50: #C0C0C0;
-  --color-gray-90: #dad8d8;
-
-  --background-color: #1A1A1A;
+  --background-color: #1a1a1a;
 
   --text-color: #f4f4f4;
-  --text-color-link: #00c8ff;
-  --text-color-link-active: #6969f7;
-  --text-color-link-visited: #00c8ff;
-
-  --syntax-tab-size: 2;
+  --menu-text-color: #c8c8c8;
+  --title-font-size: 36px;
+  --subtitle-font-size: 16px;
+  --main-text-font-size: 14px;
+  --promo-text-font-size: 24px;
 }
 
 /* Global stylesheet */
@@ -46,15 +42,16 @@ body {
   background-color: var(--background-color);
 }
 
-html {
-  overflow-y: scroll;
+body,
+div,
+p {
+  line-height: 20px;
+  font-size: var(--main-text-font-size);
+  font-weight: 300;
 }
 
-p:last-child {
-  margin-bottom: 0;
-}
-p {
-  line-height: 1.5;
+html {
+  overflow-y: scroll;
 }
 
 li {
@@ -71,9 +68,13 @@ a[href]:hover {
 }
 
 h1 {
-  font-weight: 300;
-  font-size: 36px;
-  line-height: 20px;
+  font-size: var(--title-font-size);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: var(--subtitle-font-size);
+  line-height: 25px;
 }
 
 .content {
@@ -102,22 +103,14 @@ h1 {
 
 .menu__item[href],
 .menu__item[href]:hover {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-
-  color: #C8C8C8;
+  color: var(--menu-text-color);
 }
 
 .menu__subitem[href],
 .menu__subitem[href]:hover {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  color: var(--menu-text-color);
 
   padding-left: 16px;
-
-  color: #C8C8C8;
 }
 
 .logo-container {
@@ -142,8 +135,7 @@ h1 {
   align-items: center;
   justify-content: center;
 
-  font-weight: 400;
-  font-size: 24px;
+  font-size: var(--promo-text-font-size);
   line-height: 30px;
 }
 
@@ -202,33 +194,27 @@ h1 {
   height: 48px;
   padding-top: 12px;
 
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 20px;
+  font-size: var(--promo-text-font-size);
 }
 
 .accordion__text {
   margin-top: 8px;
-}
-
-.text {
-  font-size: 16px;
 }</style>
 	</head>
 	<body>
     <nav class="menu">
   <ul>
-    <li><a href="/test" class="menu__item">Space Twistie</a></li>
-    <li><a href="/test" class="menu__item">Team Outsoursing</a></li>
-    <li><a href="/test" class="menu__subitem">How We Work</a></li>
-    <li><a href="/test" class="menu__subitem">What Sets Us Together</a></li>
-    <li><a href="/test" class="menu__item">Audit and Consulting</a></li>
-    <li><a href="/test" class="menu__subitem">Audit</a></li>
-    <li><a href="/test" class="menu__subitem">Consulting</a></li>
-    <li><a href="/test" class="menu__item">About Us</a></li>
-    <li><a href="/test" class="menu__subitem">Who We Are</a></li>
-    <li><a href="/test" class="menu__subitem">Our Mission</a></li>
-    <li><a href="/test" class="menu__item">Contact Us</a></li>
+    <li><a href="/" class="menu__item">Space Twistie</a></li>
+    <li><a href="/#team-outsourcing" class="menu__item">Team Outsourcing</a></li>
+    <li><a href="/#how-we-work" class="menu__subitem">How We Work</a></li>
+    <li><a href="/#how-we-are-different" class="menu__subitem">How We Are Different</a></li>
+    <li><a href="/#audit-consulting" class="menu__item">Audit and Consulting</a></li>
+    <li><a href="/#audit" class="menu__subitem">Audit</a></li>
+    <li><a href="/#consulting" class="menu__subitem">Consulting</a></li>
+    <li><a href="/#about-us" class="menu__item">About Us</a></li>
+    <li><a href="/#who-we-are" class="menu__subitem">Who We Are</a></li>
+    <li><a href="/#our-mission" class="menu__subitem">Our Mission</a></li>
+    <li><a href="/#contact-us" class="menu__item">Contact Us</a></li>
   </ul>
 </nav>
     <div class="content">
@@ -247,7 +233,7 @@ h1 {
 
 <div class="text-block">
 	<h1>Our Technology Stack</h1>
-	<p class="text">We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
+	<p>We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
 </div>
 
 <div class="tech-stack content-block">
@@ -318,50 +304,72 @@ h1 {
 </div>
 
 <div class="content-block">
-  <div class="content-block">
+  <div class="content-block" id="team-outsourcing">
     
 <div class="info">
   
-  <img src="img/team-outsoursing.png" class="info__img_left"/>
+  <img src="img/team-outsourcing.png" class="info__img_left"/>
   
   <span class="info__text_left">
     <h1>Team Outsourcing</h1>
-    <p class="text">We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
+    <p>We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
   </span>
   
 </div>
 
   </div>
   <details class="accordion">
-  <summary class="accordion__summary">
+  <summary class="accordion__summary" >
     How We Work
   </summary>
   <div class="accordion__text">
     
-    <h1>test</h1>
+    <h2 id="how-we-work">Getting Started</h2>
+<p>After our initial contact with you, we will request a meeting where, in addition to getting to know each other, we will strive to identify the main features of your product, your internal development processes, and the expected scope of work for our team. During this conversation, or shortly thereafter, we will propose and discuss a format for our interaction that will be most optimal for you. We will discuss the composition and required expertise of our team. We will agree on how we receive tasks and how we can discuss them, how we form, estimate, and prioritize the backlog, how we plan tasks, and how we deliver results. We will discuss code quality and style criteria, as well as the quality assurance process and our guarantees.</p>
+<h2>Team Composition</h2>
+<p>
+    May vary depending on project needs:
+    <ul>
+    <li>2 to 5 Software Engineers (including one Team Lead)</li>
+    <li>1 to 2 Quality Assurance Engineers</li>
+    <li>1 Project Manager</li>
+    <li>1 Business or Functional Analyst (optional)</li>
+    </ul>
+
+    We believe that teams with more than 10 members are less effective. The number of engineers should not exceed five, as in this case the engineer who performs the role of team lead will not be able to code. Therefore, if necessary, we increase the number of teams rather than expand the existing ones.
+</p>
+
+<h2>Processes</h2>
+<p>Our team will be integrated into your structure in such a way that all types of communication and processes necessary for effective work of the engineering team are established, while the team is not isolated from you and is not a "black box", but on the contrary, is involved in communication and joint work. Our internal processes within the team may differ from those of other teams on the project, but in such a way as not to affect the efficiency of joint work.</p>
+<h2>Quality</h2>
+<p>We guarantee the quality to the client using test cases, the composition of which we coordinate with you, and you can be sure that all the results of our work will be of proper and predictable quality. In addition, it is extremely important for us that our clients do not feel dependent on our team. Therefore, an internal criterion that guides the team is to maintain the entrusted scope of work in such a condition that it can be continued at any time by any other team with similar expertise.</p>
   
   </div>
 </details>
   <details class="accordion">
-  <summary class="accordion__summary">
-    What Sets Us Apart
+  <summary class="accordion__summary" id="how-we-are-different">
+    How We Are Different
   </summary>
   <div class="accordion__text">
     
-    <h1>test</h1>
+    <p>1.  <strong>High expertise.</strong> We have extensive experience working on various projects with our technological stack. However, if we have doubts that our team may lack expertise in any area, we will immediately inform you and prefer to decline the project rather than execute it with a risk to your product - we value our reputation.</p>
+<p>2.  <strong>Project involvement.</strong> Our main motivation is the success of the product we work on, not sophisticated engineering practices. We strive to be a part of your team to share responsibility and do everything possible to achieve the project's results. We pay special attention to instilling this approach to the products we develop among our employees.</p>
+<p>3.  <strong>Responsibility and quality guarantee.</strong> We not only pay close attention to quality, and processes for its control are built into all stages of team work, but also provide a guarantee for the work done.</p>
+<p>4.  <strong>Maximum transparency.</strong> We believe that honesty, openness, and transparency are key principles without which long-term and effective relationships with both clients and our employees cannot be built.</p>
+<p>5.  <strong>Principle of parity.</strong> We urge our employees, managers, and clients to remember and ensure that the principle of parity is maintained in all relationships, and no party feels disadvantaged. If such a situation arises, we encourage communication so that balance can be restored.</p>
   
   </div>
 </details>
 </div>
 
 <div class="content-block">
-  <div class="content-block">
+  <div class="content-block" id="audit-consulting">
     
 <div class="info">
   
   <span class="info__text_right">
     <h1>Audit and Consulting</h1>
-    <p class="text">We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
+    <p>We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
   </span>
   
   <img src="img/audit-and-consulting.png" class="info__img_right"/>
@@ -370,29 +378,48 @@ h1 {
 
   </div>
   <details class="accordion">
-  <summary class="accordion__summary">
+  <summary class="accordion__summary" id="audit">
     Audit
   </summary>
   <div class="accordion__text">
     
-    <h1>test</h1>
+    <h2>Web application audit:</h2>
+<ul>
+  <li>Codebase. Architecture. Infrastructure. Deployment.</li>
+  <li>Testing the application for bugs: functional, usability, logical, etc.</li>
+</ul>
+
+<h2>Process audit:</h2>
+<ul>
+  <li>Quality and efficiency of engineering collaboration.</li>
+  <li>Cross-functional processes and infrastructure for teamwork.</li>
+</ul>
+
+<p>Based on the audit results, we will prepare a detailed report that will include the result for each item of the conducted audit. In case of identifying problems, we will separately provide recommendations on how to fix each problem in the optimal way. We will present the report and recommendations at a joint final call.</p>
   
   </div>
 </details>
   <details class="accordion">
-  <summary class="accordion__summary">
+  <summary class="accordion__summary" id="consulting">
     Consulting
   </summary>
   <div class="accordion__text">
     
-    <h1>test</h1>
+    <p>In addition to the audit, we have experience in providing consulting services in the format of direct support of your company to achieve the necessary and previously agreed goals. In our experience, the best result can usually be achieved by directly involving one or more employees, or even a whole team, for a certain period of time directly into your production process.</p>
+
+<h2>We can:</h2>
+<ul>
+  <li>Help solve problems with development speed and quality at the department or specific team level by temporarily taking on the role of a project manager or team lead on the project. From 3 to 6 months.</li>
+  <li>Form an engineering team for you, starting from hiring to implementing effective processes and training key specialists (lead and management positions). From 6 months to 1 year.</li>
+</ul>
+
   
   </div>
 </details>
 </div>
 
 <div class="content-block">
-  <div class="content-block">
+  <div class="content-block" id="about-us">
     
 <div class="info">
   
@@ -400,14 +427,14 @@ h1 {
   
   <span class="info__text_left">
     <h1>About Us</h1>
-    <p class="text">We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
+    <p>We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
   </span>
   
 </div>
 
   </div>
   <details class="accordion">
-  <summary class="accordion__summary">
+  <summary class="accordion__summary" id="who-we-are">
     Who we are
   </summary>
   <div class="accordion__text">
@@ -417,7 +444,7 @@ h1 {
   </div>
 </details>
   <details class="accordion">
-  <summary class="accordion__summary">
+  <summary class="accordion__summary" id="our-mission">
     Our Mission
   </summary>
   <div class="accordion__text">
@@ -429,9 +456,9 @@ h1 {
 </div>
 
 
-<div class="text-block">
+<div class="text-block" id="contact-us">
 	<h1>Contact Us</h1>
-	<p class="text">We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
+	<p>We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
 </div>
 
       </main>
