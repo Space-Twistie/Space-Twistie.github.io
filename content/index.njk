@@ -41,7 +41,7 @@ layout: layouts/home.njk
   <div class="content-block" id="team-outsourcing">
     {{ info("img/team-outsourcing.png", "Team Outsourcing", "We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.") }}
   </div>
-  {% accordion "How We Work" %}
+  {% accordion "How We Work", 'how-we-work' %}
     {% include "main-page/how-we-work.njk" %}
   {% endaccordion%}
   {% accordion "How We Are Different", "how-we-are-different" %}
