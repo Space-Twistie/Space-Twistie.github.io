@@ -8,8 +8,8 @@
 :root {
   --background-color: #1a1a1a;
 
-  --text-color: #f4f4f4;
-  --menu-text-color: #c8c8c8;
+  --title-text-color: #f4f4f4;
+  --regular-text-color: #c8c8c8;
   --title-font-size: 36px;
   --subtitle-font-size: 16px;
   --main-text-font-size: 14px;
@@ -24,8 +24,13 @@
 html,
 body {
   font-family: var(--font-family);
-  color: var(--text-color);
+  color: var(--regular-text-color);
   background-color: var(--background-color);
+}
+
+h1,
+h2 {
+  color: var(--title-text-color);
 }
 
 body,
@@ -36,16 +41,12 @@ p {
   font-weight: 300;
 }
 
-html {
-  overflow-y: scroll;
-}
-
 li {
   line-height: 1.5;
 }
 
 a[href] {
-  color: var(--text-color-link);
+  color: var(--title-text-color);
   text-decoration: none;
 }
 
@@ -80,7 +81,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  
   background-color: #1e1e1e;
 }
 
@@ -94,18 +95,18 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin-top: -176px;
 }
 
 .menu__item[href],
 .menu__item[href]:hover {
-  color: var(--menu-text-color);
+  color: #fff;
+  line-height: 32px;
 }
 
 .menu__subitem[href],
 .menu__subitem[href]:hover {
-  color: var(--menu-text-color);
+  color: var(--regular-text-color);
+  line-height: 32px;
 
   padding-left: 16px;
 }
@@ -113,7 +114,6 @@ h2 {
 .menu__logo {
   width: 140px;
   margin-top: 36px;
-
 }
 
 .menu__logo_hidden {
@@ -250,6 +250,7 @@ h2 {
   height: 48px;
   padding-top: 12px;
 
+  color: var(--title-text-color);
   font-size: var(--promo-text-font-size);
 }
 
