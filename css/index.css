@@ -164,8 +164,8 @@ h2 {
 }
 
 .header__typing {
-  width: 60ch;
-  animation: typing 3s steps(60), blink .4s step-end infinite alternate;
+  width: 57ch;
+  animation: typing 3s steps(57), blink .4s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
