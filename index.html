@@ -92,6 +92,7 @@ h2 {
   height: 100vh;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
 
   background-color: #1e1e1e;
@@ -99,6 +100,16 @@ h2 {
 
 .menu ul {
   list-style-type: none;
+}
+
+.menu__items {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -176px;
 }
 
 .menu__item[href],
@@ -111,6 +122,24 @@ h2 {
   color: var(--menu-text-color);
 
   padding-left: 16px;
+}
+
+.menu__logo {
+  width: 140px;
+  margin-top: 36px;
+
+}
+
+.menu__logo_hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.menu__logo_visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
 .header {
@@ -154,6 +183,18 @@ h2 {
   border-right: 3px solid;
   font-family: monospace;
   font-size: var(--main-text-font-size);
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }
 
 .text-block {
@@ -229,36 +270,48 @@ h2 {
 .accordion__text {
   margin-top: 8px;
   padding-left: 24px;
-}
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-}
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
 }</style>
 	</head>
 	<body>
     <nav class="menu">
-  <ul>
-    <li><a href="/" class="menu__item">Space Twistie</a></li>
-    <li><a href="/#team-outsourcing" class="menu__item">Team Outsourcing</a></li>
-    <li><a href="/#how-we-work" class="menu__subitem">How We Work</a></li>
-    <li><a href="/#how-we-are-different" class="menu__subitem">How We Are Different</a></li>
-    <li><a href="/#audit-consulting" class="menu__item">Audit and Consulting</a></li>
-    <li><a href="/#audit" class="menu__subitem">Audit</a></li>
-    <li><a href="/#consulting" class="menu__subitem">Consulting</a></li>
-    <li><a href="/#about-us" class="menu__item">About Us</a></li>
-    <li><a href="/#who-we-are" class="menu__subitem">Who We Are</a></li>
-    <li><a href="/#our-mission" class="menu__subitem">Our Mission</a></li>
-    <li><a href="/#contact-us" class="menu__item">Contact Us</a></li>
-  </ul>
+  <img src="img/logo.png" class="menu__logo menu__logo_hidden" alt="logo" />
+  <div class="menu__items">
+    <ul>
+      <li><a href="/" class="menu__item">Space Twistie</a></li>
+      <li><a href="/#team-outsourcing" class="menu__item">Team Outsourcing</a></li>
+      <li><a href="/#how-we-work" class="menu__subitem">How We Work</a></li>
+      <li><a href="/#how-we-are-different" class="menu__subitem">How We Are Different</a></li>
+      <li><a href="/#audit-consulting" class="menu__item">Audit and Consulting</a></li>
+      <li><a href="/#audit" class="menu__subitem">Audit</a></li>
+      <li><a href="/#consulting" class="menu__subitem">Consulting</a></li>
+      <li><a href="/#about-us" class="menu__item">About Us</a></li>
+      <li><a href="/#who-we-are" class="menu__subitem">Who We Are</a></li>
+      <li><a href="/#our-mission" class="menu__subitem">Our Mission</a></li>
+      <li><a href="/#contact-us" class="menu__item">Contact Us</a></li>
+    </ul>
+  </div>
 </nav>
+
+<script>
+  const menuLogo = document.getElementsByClassName('menu__logo')[0]
+
+  checkPosition = () => {
+    const y = window.scrollY;
+      if (y > 300) {
+        menuLogo.classList.remove('menu__logo_hidden')
+        menuLogo.classList.add('menu__logo_visible')
+      } else {
+        menuLogo.classList.remove('menu__logo_visible')
+        menuLogo.classList.add('menu__logo_hidden')
+      }
+  }
+
+  const showOnLogoScroll = () => {
+    requestAnimationFrame(checkPosition)
+  }
+
+  window.addEventListener('scroll', showOnLogoScroll);
+</script>
     <div class="content">
 
       <main id="skip">
@@ -267,7 +320,7 @@ h2 {
 
 
 <header class="header">
-  <img src="img/logo.png" class="header__logo" />
+  <img src="img/logo.png" class="header__logo" alt="logo" />
 
   <div class="header__text">
       <div>>&nbsp;<strong class="header__command">whoami</strong></div>
