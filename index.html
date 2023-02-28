@@ -113,17 +113,29 @@ h2 {
   padding-left: 16px;
 }
 
-.logo-container {
+.header {
   width: 100%;
-  margin-top: 120px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
-.logo-img {
-  height: 180px;
-  max-width: 320px;
+.header__logo {
+  height: 130px;
+  width: 270px;
+}
+
+.header__text {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+
+  font-size: 20px;
+  line-height: 30px;
+
+  background-color: #272727;
 }
 
 .text-block {
@@ -140,7 +152,7 @@ h2 {
 }
 
 .content-block {
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 .tech-stack {
@@ -218,26 +230,28 @@ h2 {
   </ul>
 </nav>
     <div class="content">
-      <header class="logo-container">
-        <img src="img/logo.svg" class="logo-img" />
-      </header>
 
       <main id="skip">
         
 
 
 
-<div class="text-block">
-	Space Twistie develops custom web applications of any complexity to meet your unique business needs. We specialize in outsourcing services and provide expert assistance to help you achieve your goals.
-</div>
+<header class="header">
+  <img src="img/logo.png" class="header__logo" />
 
-<div class="text-block">
-	<h1>Our Technology Stack</h1>
-	<p>We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
-</div>
+  <div class="header__text">
+    Space Twistie develops custom web applications of any complexity to meet your unique business needs. We specialize in outsourcing services and provide expert assistance to help you achieve your goals.
+  </div>
+</header>
 
-<div class="tech-stack content-block">
-	
+<div class="content-block">
+  <div class="text-block">
+    <h1>Our Technology Stack</h1>
+    <p>We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
+  </div>
+
+  <div class="tech-stack content-block">
+    
 <span class="stack-icon">
   <img src="img/js-logo.svg" class="stack-icon__img" title="JavaScript logo">
   <div>
@@ -245,7 +259,7 @@ h2 {
   </div>
 </span>
 
-	
+    
 <span class="stack-icon">
   <img src="img/ts-logo.svg" class="stack-icon__img" title="TypeScript logo">
   <div>
@@ -253,7 +267,7 @@ h2 {
   </div>
 </span>
 
-	
+    
 <span class="stack-icon">
   <img src="img/node-js-logo.svg" class="stack-icon__img" title="Node.js logo">
   <div>
@@ -261,7 +275,7 @@ h2 {
   </div>
 </span>
 
-	
+    
 <span class="stack-icon">
   <img src="img/react-logo.svg" class="stack-icon__img" title="React.js logo">
   <div>
@@ -269,7 +283,7 @@ h2 {
   </div>
 </span>
 
-	
+    
 <span class="stack-icon">
   <img src="img/vue-logo.svg" class="stack-icon__img" title="Vue.js logo">
   <div>
@@ -277,7 +291,7 @@ h2 {
   </div>
 </span>
 
-	
+    
 <span class="stack-icon">
   <img src="img/java-logo.svg" class="stack-icon__img" title="Java logo">
   <div>
@@ -285,7 +299,7 @@ h2 {
   </div>
 </span>
 
-	
+    
 <span class="stack-icon">
   <img src="img/kotlin-logo.svg" class="stack-icon__img" title="Kotlin logo">
   <div>
@@ -293,7 +307,7 @@ h2 {
   </div>
 </span>
 
-	
+    
 <span class="stack-icon">
   <img src="img/spring-logo.svg" class="stack-icon__img" title="Spring logo">
   <div>
@@ -301,6 +315,7 @@ h2 {
   </div>
 </span>
 
+  </div>
 </div>
 
 <div class="content-block">

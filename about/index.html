@@ -113,17 +113,29 @@ h2 {
   padding-left: 16px;
 }
 
-.logo-container {
+.header {
   width: 100%;
-  margin-top: 120px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
-.logo-img {
-  height: 180px;
-  max-width: 320px;
+.header__logo {
+  height: 130px;
+  width: 270px;
+}
+
+.header__text {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+
+  font-size: 20px;
+  line-height: 30px;
+
+  background-color: #272727;
 }
 
 .text-block {
@@ -140,7 +152,7 @@ h2 {
 }
 
 .content-block {
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 .tech-stack {
@@ -218,9 +230,6 @@ h2 {
   </ul>
 </nav>
     <div class="content">
-      <header class="logo-container">
-        <img src="img/logo.svg" class="logo-img" />
-      </header>
 
       <main id="skip">
         <h1 id="about-me" tabindex="-1">About Me <a class="header-anchor" href="#about-me">#</a></h1>
