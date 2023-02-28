@@ -152,7 +152,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 580px;
+  min-width: 540px;
   padding: 30px;
 
   font-family: monospace;
