@@ -131,13 +131,28 @@ h2 {
 
 .header__text {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 30px;
 
-  font-size: 20px;
-  line-height: 30px;
+  font-family: monospace;
+  font-size: var(--main-text-font-size);
 
   background-color: #272727;
+}
+
+.header__command {
+  color: #0495BC;
+}
+
+.header__typing {
+  width: 61ch;
+  animation: typing 3s steps(61), blink .4s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: var(--main-text-font-size);
 }
 
 .text-block {
@@ -213,6 +228,18 @@ h2 {
 .accordion__text {
   margin-top: 8px;
   padding-left: 24px;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }</style>
 	</head>
 	<body>
@@ -242,9 +269,22 @@ h2 {
   <img src="img/logo.png" class="header__logo" />
 
   <div class="header__text">
-    Space Twistie develops custom web applications of any complexity to meet your unique business needs. We specialize in outsourcing services and provide expert assistance to help you achieve your goals.
+      <div>>&nbsp;<strong class="header__command">whoami</strong></div>
+      <div>Space Twistie develops custom web applications of any complexity to meet your unique business needs. We specialize in outsourcing services and provide expert assistance to help you achieve your goals.</div>
+      <div>
+        <div class="header__typing">
+          <span>
+            >&nbsp;
+            <strong class="header__command">develop-a-project&nbsp;</strong>
+            <strong>--expertise&nbsp;</strong>
+            <strong>--transparency&nbsp;</strong>
+            <strong>--quality&nbsp;</strong>
+          </span>
+        </div>
+      </div>
   </div>
 </header>
+
 
 <div class="content-block">
   <div class="text-block">
