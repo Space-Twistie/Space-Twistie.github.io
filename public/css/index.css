@@ -117,13 +117,28 @@ h2 {
 
 .header__text {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 30px;
 
-  font-size: 20px;
-  line-height: 30px;
+  font-family: monospace;
+  font-size: var(--main-text-font-size);
 
   background-color: #272727;
+}
+
+.header__command {
+  color: #0495BC;
+}
+
+.header__typing {
+  width: 61ch;
+  animation: typing 3s steps(61), blink .4s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: var(--main-text-font-size);
 }
 
 .text-block {
@@ -199,4 +214,16 @@ h2 {
 .accordion__text {
   margin-top: 8px;
   padding-left: 24px;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }
