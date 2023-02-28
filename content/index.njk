@@ -10,7 +10,7 @@ layout: layouts/home.njk
 
 <div class="text-block">
 	<h1>Our Technology Stack</h1>
-	<p class="text">We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
+	<p>We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
 </div>
 
 <div class="tech-stack content-block">
@@ -25,43 +25,43 @@ layout: layouts/home.njk
 </div>
 
 <div class="content-block">
-  <div class="content-block">
-    {{ info("img/team-outsoursing.png", "Team Outsourcing", "We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.") }}
+  <div class="content-block" id="team-outsourcing">
+    {{ info("img/team-outsourcing.png", "Team Outsourcing", "We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.") }}
   </div>
   {% accordion "How We Work" %}
-    <h1>test</h1>
+    {% include "main-page/how-we-work.njk" %}
   {% endaccordion%}
-  {% accordion "What Sets Us Apart" %}
-    <h1>test</h1>
+  {% accordion "How We Are Different", "how-we-are-different" %}
+    {% include "main-page/how-we-are-different.njk" %}
   {% endaccordion%}
 </div>
 
 <div class="content-block">
-  <div class="content-block">
+  <div class="content-block" id="audit-consulting">
     {{ info("img/audit-and-consulting.png", "Audit and Consulting", "We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.", "right") }}
   </div>
-  {% accordion "Audit" %}
-    <h1>test</h1>
+  {% accordion "Audit", "audit" %}
+    {% include "main-page/audit.njk" %}
   {% endaccordion%}
-  {% accordion "Consulting" %}
-    <h1>test</h1>
+  {% accordion "Consulting", "consulting" %}
+    {% include "main-page/consulting.njk" %}
   {% endaccordion%}
 </div>
 
 <div class="content-block">
-  <div class="content-block">
+  <div class="content-block" id="about-us">
     {{ info("img/about-us.png", "About Us", "We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.") }}
   </div>
-  {% accordion "Who we are" %}
+  {% accordion "Who we are", "who-we-are" %}
     <h1>test</h1>
   {% endaccordion%}
-  {% accordion "Our Mission" %}
+  {% accordion "Our Mission", "our-mission" %}
     <h1>test</h1>
   {% endaccordion%}
 </div>
 
 
-<div class="text-block">
+<div class="text-block" id="contact-us">
 	<h1>Contact Us</h1>
-	<p class="text">We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
+	<p>We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
 </div>
