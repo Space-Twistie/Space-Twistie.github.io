@@ -133,13 +133,13 @@ h2 {
   margin-top: 36px;
 }
 
-.menu__logo_hidden {
+.menu__element_hidden {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
 }
 
-.menu__logo_visible {
+.menu__element_visible {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.3s, visibility 0.3s;
@@ -375,7 +375,7 @@ h2 {
 	</head>
 	<body>
     <nav class="menu">
-  <a href="/"><img src="img/logo.svg" class="menu__logo menu__logo_hidden" alt="logo" /></a>
+  <a href="/"><img src="img/logo.svg" class="menu__logo menu__element_hidden" alt="logo" id="menu-logo" /></a>
   <div class="menu__items">
     <ul>
       <li><a href="/" class="menu__item">Space Twistie</a></li>
@@ -391,7 +391,7 @@ h2 {
       <li><a href="/#contact-us" class="menu__item">Contact Us</a></li>
     </ul>
   </div>
-  <div class="menu__social-icons">
+  <div class="menu__social-icons menu__element_visible" id="menu-icons">
     <div class="social-icons">
   <a href="https://github.com/Space-Twistie" target="_blank" class="social-icons__icon">
     <svg xmlns="http://www.w3.org/2000/svg" width="38" height="40"><path fill="#0495BC" d="M18.602 9.788c-5.796-.002-10.49 4.69-10.49 10.482 0 4.58 2.936 8.472 7.026 9.902.551.138.467-.253.467-.52v-1.817c-3.18.373-3.31-1.732-3.523-2.083-.431-.736-1.45-.924-1.146-1.275.724-.373 1.462.093 2.318 1.357.619.916 1.826.761 2.437.61.134-.552.42-1.044.814-1.426-3.296-.59-4.67-2.602-4.67-4.992 0-1.16.383-2.227 1.133-3.087-.478-1.418.044-2.632.115-2.812 1.361-.122 2.777.975 2.887 1.061.774-.208 1.657-.318 2.646-.318.994 0 1.88.115 2.66.325.265-.201 1.578-1.143 2.843-1.029.069.181.58 1.367.13 2.766.759.863 1.146 1.938 1.146 3.1 0 2.396-1.383 4.41-4.688 4.99a2.986 2.986 0 0 1 .893 2.134v2.636c.019.211 0 .42.351.42 4.151-1.4 7.14-5.32 7.14-9.94 0-5.794-4.697-10.484-10.489-10.484Z"/></svg>
@@ -410,24 +410,29 @@ h2 {
 </nav>
 
 <script>
-  const menuLogo = document.getElementsByClassName('menu__logo')[0]
+  const menuLogo = document.getElementById('menu-logo')
+  const menuIcons = document.getElementById('menu-icons')
 
-  checkPosition = () => {
-    const y = window.scrollY;
-      if (y > 300) {
-        menuLogo.classList.remove('menu__logo_hidden')
-        menuLogo.classList.add('menu__logo_visible')
-      } else {
-        menuLogo.classList.remove('menu__logo_visible')
-        menuLogo.classList.add('menu__logo_hidden')
-      }
+  checkPosition = (elem, condition) => () => {
+    if (condition) {
+      elem.classList.remove('menu__element_hidden')
+      elem.classList.add('menu__element_visible')
+    } else {
+      elem.classList.remove('menu__element_visible')
+      elem.classList.add('menu__element_hidden')
+    }
   }
 
-  const showOnLogoScroll = () => {
-    requestAnimationFrame(checkPosition)
+  const showLogoOnScroll = () => {
+    requestAnimationFrame(checkPosition(menuLogo, window.scrollY > 300))
   }
 
-  window.addEventListener('scroll', showOnLogoScroll);
+  const showIconsOnScroll = () => {
+    requestAnimationFrame(checkPosition(menuIcons, window.scrollY < 3100))
+  }
+
+  window.addEventListener('scroll', showLogoOnScroll);
+  window.addEventListener('scroll', showIconsOnScroll);
 </script>
     <div class="content">
 

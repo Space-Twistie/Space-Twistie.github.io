@@ -119,13 +119,13 @@ h2 {
   margin-top: 36px;
 }
 
-.menu__logo_hidden {
+.menu__element_hidden {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
 }
 
-.menu__logo_visible {
+.menu__element_visible {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.3s, visibility 0.3s;
