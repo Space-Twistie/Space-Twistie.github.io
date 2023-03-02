@@ -141,8 +141,8 @@ h2 {
   margin-bottom: 34px;
 }
 
-.social-icons__icon:hover {
-  fill: #FDC407;
+.social-icons__icon:hover path {
+  fill: #53C1DE;
 }
 
 .header {
