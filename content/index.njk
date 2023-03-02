@@ -1,7 +1,7 @@
 ---
 layout: layouts/home.njk
 ---
-{% from 'stack-icon.njk' import stackIcon %}
+{% from 'main-page/stack-icon.njk' import stackIcon %}
 {% from 'info.njk' import info %}
 
 <header class="header">
@@ -64,13 +64,17 @@ layout: layouts/home.njk
 <div class="content-block">
   <div class="content-block" id="about-us">
     {{ info("img/about-us.png", "About Us", "We are a team of highly skilled professionals with over a decade of experience in web application development. Our unique expertise has been gained through years of working on a diverse range of projects, both as part of product teams and in outsourcing.") }}
-    {% include "founders.njk" %}
+    {% include "main-page/founders.njk" %}
   </div>
 </div>
 
-{% include "peace.njk" %}
+{% include "main-page/peace.njk" %}
 
 <div class="separator" />
+
+<div class="content-block">
+  {{ info("img/contact-us.png", "Contact Us", "If you require our services or have any ideas for collaboration,  we would be delighted to have a conversation with you.", "right") }}
+</div>
 
 <div class="text-block" id="contact-us">
 	<h1>Contact Us</h1>
