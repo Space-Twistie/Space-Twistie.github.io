@@ -1,6 +1,7 @@
 module.exports = eleventyConfig => {
-  eleventyConfig.addPairedShortcode("accordion", function(content, title, id = '') {
-    return `<details class="accordion">
+  eleventyConfig.addPairedShortcode('accordion', function(content, title, id = '') {
+    return `
+<details class="accordion">
   <summary class="accordion__summary" ${id ? 'id="' + id + '"' : ''}>
     ${title}
   </summary>
@@ -8,5 +9,18 @@ module.exports = eleventyConfig => {
     ${content}
   </div>
 </details>`
+  })
+
+  eleventyConfig.addPairedShortcode('founder', (content, name, position, photo) => {
+    return `
+<div class="founder">
+  <img src="${photo}" alt="${name}'s photo" class="founder__photo" />
+  <div class="founder__info">
+    <h1 class="founder__name">${name}</h1>
+    <span class="founder__position">${position}</span>
+    <div class="founder__description">${content}</div>
+  </div>
+</div>
+    `
   })
 }
