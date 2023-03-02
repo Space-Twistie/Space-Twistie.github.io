@@ -131,14 +131,15 @@ h2 {
   transition: opacity 0.3s, visibility 0.3s;
 }
 
-.social-icons {
+.menu__social-icons {
   width: 70%;
+  margin-bottom: 34px;
+}
 
+.social-icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  margin-bottom: 34px;
 }
 
 .social-icons__icon:hover path {
@@ -217,7 +218,7 @@ h2 {
   margin-bottom: 60px;
 }
 
-.tech-stack {
+.info-frame {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -341,4 +342,19 @@ h2 {
 .peace__subtext {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.footer__contacts {
+  width: 100%;
+}
+
+.footer__social-icons-container {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 40px;
+}
+
+.footer__social-icons {
+  width: 345px;
 }

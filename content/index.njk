@@ -25,7 +25,7 @@ layout: layouts/home.njk
     <p>We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
   </div>
 
-  <div class="tech-stack content-block">
+  <div class="info-frame content-block">
     {{ stackIcon("img/js-logo.svg", "JavaScript") }}
     {{ stackIcon("img/ts-logo.svg", "TypeScript") }}
     {{ stackIcon("img/node-js-logo.svg", "Node.js") }}
@@ -70,13 +70,4 @@ layout: layouts/home.njk
 
 {% include "main-page/peace.njk" %}
 
-<div class="separator" />
-
-<div class="content-block">
-  {{ info("img/contact-us.png", "Contact Us", "If you require our services or have any ideas for collaboration,  we would be delighted to have a conversation with you.", "right") }}
-</div>
-
-<div class="text-block" id="contact-us">
-	<h1>Contact Us</h1>
-	<p>We provide expertly-formed engineering teams that can either strengthen your existing engineering department or take full responsibility for the technical aspects of your web application development.</p>
-</div>
+{% include "footer.njk" %}
