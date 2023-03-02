@@ -133,13 +133,13 @@ h2 {
   margin-top: 36px;
 }
 
-.menu__element_hidden {
+.menu__logo_hidden {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
 }
 
-.menu__element_visible {
+.menu__logo_visible {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.3s, visibility 0.3s;
@@ -375,7 +375,7 @@ h2 {
 	</head>
 	<body>
     <nav class="menu">
-  <a href="/"><img src="img/logo.svg" class="menu__logo menu__element_hidden" alt="logo" id="menu-logo" /></a>
+  <a href="/"><img src="img/logo.svg" class="menu__logo menu__logo_hidden" alt="logo" /></a>
   <div class="menu__items">
     <ul>
       <li><a href="/" class="menu__item">Space Twistie</a></li>
@@ -391,7 +391,7 @@ h2 {
       <li><a href="/#contact-us" class="menu__item">Contact Us</a></li>
     </ul>
   </div>
-  <div class="menu__social-icons menu__element_visible" id="menu-icons">
+  <div class="menu__social-icons">
     <div class="social-icons">
   <a href="https://github.com/Space-Twistie" target="_blank" class="social-icons__icon">
     <svg xmlns="http://www.w3.org/2000/svg" width="38" height="40"><path fill="#0495BC" d="M18.602 9.788c-5.796-.002-10.49 4.69-10.49 10.482 0 4.58 2.936 8.472 7.026 9.902.551.138.467-.253.467-.52v-1.817c-3.18.373-3.31-1.732-3.523-2.083-.431-.736-1.45-.924-1.146-1.275.724-.373 1.462.093 2.318 1.357.619.916 1.826.761 2.437.61.134-.552.42-1.044.814-1.426-3.296-.59-4.67-2.602-4.67-4.992 0-1.16.383-2.227 1.133-3.087-.478-1.418.044-2.632.115-2.812 1.361-.122 2.777.975 2.887 1.061.774-.208 1.657-.318 2.646-.318.994 0 1.88.115 2.66.325.265-.201 1.578-1.143 2.843-1.029.069.181.58 1.367.13 2.766.759.863 1.146 1.938 1.146 3.1 0 2.396-1.383 4.41-4.688 4.99a2.986 2.986 0 0 1 .893 2.134v2.636c.019.211 0 .42.351.42 4.151-1.4 7.14-5.32 7.14-9.94 0-5.794-4.697-10.484-10.489-10.484Z"/></svg>
@@ -402,7 +402,7 @@ h2 {
   <a href="https://www.linkedin.com/company/spacetwistie/" target="_blank" class="social-icons__icon">
     <svg xmlns="http://www.w3.org/2000/svg" width="38" height="40"><path fill="#0592B8" d="M28.122 9.283H10.138c-.95 0-1.722.772-1.722 1.723v17.983c0 .951.771 1.723 1.722 1.723h17.984c.95 0 1.722-.772 1.722-1.723V11.006c0-.951-.771-1.723-1.722-1.723Zm0 19.715c-11.995-.003-17.992-.006-17.992-.009.003-11.994.005-17.991.008-17.991 11.995.002 17.992.005 17.992.008-.003 11.994-.005 17.992-.008 17.992Zm-16.53-11.682h3.18v10.227h-3.18V17.316Zm1.592-1.398a1.845 1.845 0 0 0 1.303-3.146 1.843 1.843 0 1 0-1.303 3.146Zm6.758 6.565c0-1.334.254-2.625 1.907-2.625 1.628 0 1.652 1.524 1.652 2.711v4.974h3.177v-5.609c0-2.753-.594-4.872-3.811-4.872-1.546 0-2.582.849-3.008 1.652h-.043v-1.398h-3.051v10.227h3.177v-5.06Z"/></svg>
   </a>
-  <a href="" target="_blank" class="social-icons__icon">
+  <a href="https://www.facebook.com/spacetwistie" target="_blank" class="social-icons__icon">
     <svg xmlns="http://www.w3.org/2000/svg" width="38" height="40"><path fill="#0495BC" d="M29.246 9.283H9.532a.856.856 0 0 0-.858.857v19.715c0 .474.383.857.858.857h19.714a.856.856 0 0 0 .857-.857V10.14a.856.856 0 0 0-.857-.857Zm-.857 19.715h-4.931v-6.584h2.785l.418-3.233h-3.204v-2.066c0-.937.26-1.575 1.602-1.575h1.712v-2.892a22.602 22.602 0 0 0-2.497-.129c-2.47 0-4.16 1.508-4.16 4.275v2.384h-2.79v3.233h2.793v6.587H10.39v-18h18v18Z"/></svg>
   </a>
 </div>
@@ -410,29 +410,24 @@ h2 {
 </nav>
 
 <script>
-  const menuLogo = document.getElementById('menu-logo')
-  const menuIcons = document.getElementById('menu-icons')
+  const menuLogo = document.getElementsByClassName('menu__logo')[0]
 
-  checkPosition = (elem, condition) => () => {
-    if (condition) {
-      elem.classList.remove('menu__element_hidden')
-      elem.classList.add('menu__element_visible')
-    } else {
-      elem.classList.remove('menu__element_visible')
-      elem.classList.add('menu__element_hidden')
-    }
+  checkPosition = () => {
+    const y = window.scrollY;
+      if (y > 300) {
+        menuLogo.classList.remove('menu__logo_hidden')
+        menuLogo.classList.add('menu__logo_visible')
+      } else {
+        menuLogo.classList.remove('menu__logo_visible')
+        menuLogo.classList.add('menu__logo_hidden')
+      }
   }
 
-  const showLogoOnScroll = () => {
-    requestAnimationFrame(checkPosition(menuLogo, window.scrollY > 300))
+  const showOnLogoScroll = () => {
+    requestAnimationFrame(checkPosition)
   }
 
-  const showIconsOnScroll = () => {
-    requestAnimationFrame(checkPosition(menuIcons, window.scrollY < 3100))
-  }
-
-  window.addEventListener('scroll', showLogoOnScroll);
-  window.addEventListener('scroll', showIconsOnScroll);
+  window.addEventListener('scroll', showOnLogoScroll);
 </script>
     <div class="content">
 
@@ -748,7 +743,7 @@ h2 {
 
     <div class="info-frame">
         <span class="footer__contacts">
-            You can reach out to us by emailing <a href="mailto:go@spacetwistie.com">go@spacetwistie.com</a></br>or by connecting with us in real-time via <a href="" target="_blank">Facebook</a>.
+            You can reach out to us by emailing <a href="mailto:go@spacetwistie.com">go@spacetwistie.com</a></br>or by connecting with us in real-time via <a href="https://www.facebook.com/spacetwistie" target="_blank">Facebook</a>.
         </span>
     </div>
 
@@ -764,7 +759,7 @@ h2 {
   <a href="https://www.linkedin.com/company/spacetwistie/" target="_blank" class="social-icons__icon">
     <svg xmlns="http://www.w3.org/2000/svg" width="38" height="40"><path fill="#0592B8" d="M28.122 9.283H10.138c-.95 0-1.722.772-1.722 1.723v17.983c0 .951.771 1.723 1.722 1.723h17.984c.95 0 1.722-.772 1.722-1.723V11.006c0-.951-.771-1.723-1.722-1.723Zm0 19.715c-11.995-.003-17.992-.006-17.992-.009.003-11.994.005-17.991.008-17.991 11.995.002 17.992.005 17.992.008-.003 11.994-.005 17.992-.008 17.992Zm-16.53-11.682h3.18v10.227h-3.18V17.316Zm1.592-1.398a1.845 1.845 0 0 0 1.303-3.146 1.843 1.843 0 1 0-1.303 3.146Zm6.758 6.565c0-1.334.254-2.625 1.907-2.625 1.628 0 1.652 1.524 1.652 2.711v4.974h3.177v-5.609c0-2.753-.594-4.872-3.811-4.872-1.546 0-2.582.849-3.008 1.652h-.043v-1.398h-3.051v10.227h3.177v-5.06Z"/></svg>
   </a>
-  <a href="" target="_blank" class="social-icons__icon">
+  <a href="https://www.facebook.com/spacetwistie" target="_blank" class="social-icons__icon">
     <svg xmlns="http://www.w3.org/2000/svg" width="38" height="40"><path fill="#0495BC" d="M29.246 9.283H9.532a.856.856 0 0 0-.858.857v19.715c0 .474.383.857.858.857h19.714a.856.856 0 0 0 .857-.857V10.14a.856.856 0 0 0-.857-.857Zm-.857 19.715h-4.931v-6.584h2.785l.418-3.233h-3.204v-2.066c0-.937.26-1.575 1.602-1.575h1.712v-2.892a22.602 22.602 0 0 0-2.497-.129c-2.47 0-4.16 1.508-4.16 4.275v2.384h-2.79v3.233h2.793v6.587H10.39v-18h18v18Z"/></svg>
   </a>
 </div>
