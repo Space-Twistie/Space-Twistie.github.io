@@ -6,12 +6,10 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 
-		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+		<link rel="preload"  as="style" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono|Ubuntu+Light&display=swap">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap">
 
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono">
-
-		{%- css %}* { box-sizing: border-box; }{% endcss %}
 		{%- css %}{% include "public/css/index.css" %}{% endcss %}
 
 		<style>{% getBundle "css" %}</style>
