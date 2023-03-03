@@ -355,7 +355,7 @@ h2 {
 
 @media (max-width: 768px) {
   .content {
-    max-width: 720px;
+    max-width: 100%;
     margin: 0;
     padding: 20px;
   }
@@ -379,6 +379,16 @@ h2 {
 
   .header__logo {
     margin: 0 0 60px 0;
+  }
+  
+  .header__text {
+    min-width: 360px;
+    line-height: 1.4;
+    padding: 10px;
+  }
+
+  .header__text div {
+    font-size: 10px;
   }
 
   .footer__social-icons-container {
