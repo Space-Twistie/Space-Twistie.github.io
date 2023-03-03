@@ -6,6 +6,7 @@
 		<title>Space Twistie</title>
 		<meta name="description" content="">
 
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 		<link rel="preload"  as="style" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono|Ubuntu+Light&display=swap">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap">
@@ -248,17 +249,20 @@ h2 {
   margin-bottom: 10px;
 }
 
-.info {
+.info_left,
+.info_rigth {
   display: flex;
 }
 
 .info__img_left {
   height: 280px;
+  width: 280px;
   margin-right: 60px;
 }
 
 .info__img_right {
   height: 280px;
+  width: 280px;
   margin-left: 60px;
 }
 
@@ -367,7 +371,7 @@ h2 {
 
 @media (max-width: 768px) {
   .content {
-    max-width: 720px;
+    max-width: 100%;
     margin: 0;
     padding: 20px;
   }
@@ -392,12 +396,54 @@ h2 {
   .header__logo {
     margin: 0 0 60px 0;
   }
+  
+  .header__text {
+    min-width: 360px;
+    line-height: 1.4;
+    padding: 10px;
+  }
+
+  .header__text div {
+    font-size: 10px;
+  }
 
   .footer__social-icons-container {
     display: flex;
     justify-content: center;
 
     margin-top: 40px;
+  }
+
+  .info_left,
+  .info_right {
+    display: flex;
+    align-items: center;
+  }
+
+  .info_left {
+    flex-direction: column;
+  }
+
+  .info_right {
+    flex-direction: column-reverse;
+  }
+
+  .info__text_right {
+    text-align: left;
+  }
+
+  .info__img_left,
+  .info__img_right {
+    margin: 0;
+  }
+
+  .founder {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .founder__info {
+    margin: 0;
   }
 }</style>
 	</head>
