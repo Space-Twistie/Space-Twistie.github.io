@@ -236,17 +236,20 @@ h2 {
   margin-bottom: 10px;
 }
 
-.info {
+.info_left,
+.info_rigth {
   display: flex;
 }
 
 .info__img_left {
   height: 280px;
+  width: 280px;
   margin-right: 60px;
 }
 
 .info__img_right {
   height: 280px;
+  width: 280px;
   margin-left: 60px;
 }
 
@@ -396,6 +399,38 @@ h2 {
     justify-content: center;
 
     margin-top: 40px;
+  }
+
+  .info_left,
+  .info_right {
+    display: flex;
+    align-items: center;
+  }
+
+  .info_left {
+    flex-direction: column;
+  }
+
+  .info_right {
+    flex-direction: column-reverse;
+  }
+
+  .info__text_right {
+    text-align: left;
+  }
+
+  .info__img_left,
+  .info__img_right {
+    margin: 0;
+  }
+
+  .founder {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .founder__info {
+    margin: 0;
   }
 }
 
