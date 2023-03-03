@@ -1,13 +1,9 @@
-/* Defaults */
 :root {
   --font-family: Ubuntu;
   --font-family-monospace: Ubuntu Mono;
-}
+  --tablet: 768px;
 
-/* Theme colors */
-:root {
   --background-color: #1a1a1a;
-
   --title-text-color: #f4f4f4;
   --regular-text-color: #c8c8c8;
   --title-font-size: 36px;
@@ -299,10 +295,11 @@ h2 {
 }
 
 .founder__photo {
-  height: 176px;
-  padding: 10px;
+  height: 196px;
+  width: 160px;
 
   border: 1px solid #525252;
+  padding: 10px;
 }
 
 .founder__info {
@@ -349,12 +346,46 @@ h2 {
 }
 
 .footer__social-icons-container {
-  display: flex;
-  justify-content: center;
-
-  margin-top: 40px;
+  display: none;
 }
 
 .footer__social-icons {
   width: 345px;
 }
+
+@media (max-width: 768px) {
+  .content {
+    max-width: 720px;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .stack-icons {
+    grid-template-columns: repeat(4,1fr);
+    display: grid;
+  }
+
+  .stack-icon {
+    margin: 5px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .header__logo {
+    margin: 0 0 60px 0;
+  }
+
+  .footer__social-icons-container {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 40px;
+  }
+}
+
