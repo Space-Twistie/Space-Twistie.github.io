@@ -299,10 +299,11 @@ h2 {
 }
 
 .founder__photo {
-  height: 176px;
-  padding: 10px;
+  height: 196px;
+  width: 160px;
 
   border: 1px solid #525252;
+  padding: 10px;
 }
 
 .founder__info {
