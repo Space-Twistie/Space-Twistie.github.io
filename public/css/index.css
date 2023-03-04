@@ -112,6 +112,7 @@ h2 {
 
 .menu__logo {
   width: 140px;
+  height: 70px;
   margin-top: 36px;
 }
 
@@ -233,6 +234,8 @@ h2 {
 }
 
 .stack-icon__img {
+  width: 30px;
+  height: 30px;
   margin-bottom: 10px;
 }
 
@@ -330,6 +333,9 @@ h2 {
 }
 
 .peace__img {
+  width: 82px;
+  height: 90px;
+
   margin: 50px;
 }
 
