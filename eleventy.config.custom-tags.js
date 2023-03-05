@@ -16,7 +16,7 @@ module.exports = eleventyConfig => {
 <div class="founder">
   <img src="${photo}" alt="${name}'s photo" class="founder__photo" />
   <div class="founder__info">
-    <h1 class="founder__name">${name}</h1>
+    <h2 class="founder__name">${name}</h2>
     <span class="founder__position">${position}</span>
     <div class="founder__description">${content}</div>
   </div>
