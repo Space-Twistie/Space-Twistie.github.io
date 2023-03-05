@@ -3,7 +3,7 @@ module.exports = eleventyConfig => {
     return `
 <details class="accordion">
   <summary class="accordion__summary" ${id ? 'id="' + id + '"' : ''}>
-    ${title}
+    <h2>${title}</h2>
   </summary>
   <div class="accordion__text">
     ${content}

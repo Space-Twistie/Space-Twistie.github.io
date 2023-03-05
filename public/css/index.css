@@ -296,10 +296,12 @@ h3 {
 
 .accordion__summary {
   height: 48px;
-  padding-top: 12px;
+  padding-top: 8px;
+  font-size: var(--h2-font-size);
+}
 
-  color: var(--title-text-color);
-  font-size: var(--promo-text-font-size);
+.accordion__summary > h2 {
+  display: contents;
 }
 
 .accordion__text {
