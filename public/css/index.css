@@ -286,6 +286,10 @@ h3 {
   text-align: right;
 }
 
+.info__text_right > h1 {
+  justify-content: right;
+}
+
 .accordion {
   border-top: 1px solid #525252;
 }
@@ -462,6 +466,10 @@ h3 {
 
   .info__text_right {
     text-align: left;
+  }
+
+  .info__text_right > h1 {
+    justify-content: initial;
   }
 
   .info__img_left,
