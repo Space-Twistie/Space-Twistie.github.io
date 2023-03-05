@@ -19,8 +19,9 @@
   --background-color: #1a1a1a;
   --title-text-color: #f4f4f4;
   --regular-text-color: #c8c8c8;
-  --title-font-size: 36px;
-  --subtitle-font-size: 16px;
+  --h1-font-size: 36px;
+  --h2-font-size: 24px;
+  --h3-font-size: 20px;
   --main-text-font-size: 16px;
   --promo-text-font-size: 24px;
 }
@@ -40,6 +41,7 @@ body {
 
 h1,
 h2,
+h3,
 b,
 strong {
   color: var(--title-text-color);
@@ -50,7 +52,10 @@ div,
 p {
   font-size: var(--main-text-font-size);
   font-weight: 300;
+}
 
+p {
+  margin-bottom: 30px;
 }
 
 li {
@@ -66,16 +71,28 @@ a[href]:hover {
   text-decoration: underline;
 }
 
-h1 {
-  font-size: var(--title-font-size);
+h1,
+h2,
+h3 {
   font-weight: 300;
+
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
   line-height: 40px;
 }
 
 h2 {
-  font-weight: 700;
-  font-size: var(--subtitle-font-size);
-  line-height: 40px;
+  font-size: var(--h2-font-size);
+  line-height: 28px;
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  line-height: 24px;
 }
 
 .content {
@@ -282,6 +299,10 @@ h2 {
   text-align: right;
 }
 
+.info__text_right > h1 {
+  justify-content: right;
+}
+
 .accordion {
   border-top: 1px solid #525252;
 }
@@ -375,6 +396,20 @@ h2 {
   width: 345px;
 }
 
+.text-icon {
+  width: 48px;
+  height: 48px;
+
+  margin-right: 28px;
+}
+
+.text-icon_digit {
+  width: 20px;
+  height: 40px;
+
+  margin-right: 28px;
+}
+
 @media (max-width: 768px) {
   .content {
     max-width: 100%;
@@ -444,6 +479,10 @@ h2 {
 
   .info__text_right {
     text-align: left;
+  }
+
+  .info__text_right > h1 {
+    justify-content: initial;
   }
 
   .info__img_left,
