@@ -14,7 +14,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('founder', (content, name, position, photo) => {
     return `
 <div class="founder">
-  <img src="${photo}" alt="${name}'s photo" class="founder__photo" />
+  <img src="${photo}" alt="${name}'s photo" class="founder__photo"/>
   <div class="founder__info">
     <h2 class="founder__name">${name}</h2>
     <span class="founder__position">${position}</span>
