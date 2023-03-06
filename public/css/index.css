@@ -338,6 +338,10 @@ footer {
   border-top: 1px solid #525252;
 }
 
+.founders {
+  padding-left: 24px;
+}
+
 .founder {
   display: flex;
   flex-direction: row;
