@@ -24,6 +24,7 @@ body {
   color: var(--regular-text-color);
   background-color: var(--background-color);
   line-height: 25px;
+  height: 100%;
 }
 
 h1,
@@ -411,10 +412,11 @@ footer {
 
 .footer__logo-container {
   width: 100%;
-  margin-top: 46px;
+  height: 160px;
 
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .footer__logo {
