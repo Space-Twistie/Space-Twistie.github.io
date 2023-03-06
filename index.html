@@ -409,6 +409,9 @@ footer {
 
 .footer__contacts {
   width: 100%;
+
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .footer__social-icons-container {
@@ -417,6 +420,22 @@ footer {
 
 .footer__social-icons {
   width: 345px;
+}
+
+.footer__logo-container {
+  width: 100%;
+  margin-top: 46px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.footer__logo {
+  filter: grayscale(1)
+}
+
+.footer__logo:hover {
+  filter: none;
 }
 
 .text-icon {
@@ -513,6 +532,10 @@ footer {
 
   .founder__info {
     margin: 0;
+  }
+
+  .footer__logo {
+    filter: none;
   }
 }</style>
 	</head>
@@ -952,6 +975,10 @@ footer {
   </a>
 </div>
     </div>
+  </div>
+
+  <div class="footer__logo-container">
+    <a href="/" aria-label="Home Page"><img src="img/circle-logo.svg" alt="circle logo" class="footer__logo"/></a>
   </div>
 </footer>
 
