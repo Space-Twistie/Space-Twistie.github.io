@@ -62,15 +62,17 @@ layout: layouts/home.njk
 </div>
 
 <div class="content-block" id="about-us">
-  {{ info("img/about-us.avif", "About Us", "We are a team of highly skilled professionals with over a decade of experience in web application development. Our unique expertise has been gained through years of working on a diverse range of projects, both as part of product teams and in outsourcing.") }}
-  <div class="separator"/>
+  <div class="content-block">
+    {{ info("img/about-us.avif", "About Us", "We are a team of highly skilled professionals with over a decade of experience in web application development. Our unique expertise has been gained through years of working on a diverse range of projects, both as part of product teams and in outsourcing.") }}
+  </div>
+  <div class="separator"></div>
   {% include "main-page/founders.njk" %}
 </div>
 
 <div class="content-block">
-  <div class="separator"/>
+  <div class="separator"></div>
   {% include "main-page/peace.njk" %}
-  <div class="separator"/>
+  <div class="separator"></div>
 </div>
 
 {% include "footer.njk" %}
