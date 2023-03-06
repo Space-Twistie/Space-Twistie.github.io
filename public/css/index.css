@@ -137,7 +137,7 @@ footer {
 .menu__subitem[href],
 .menu__subitem[href]:hover {
   font-size: 14px;;
-  color: #848484;
+  color: #9a9a9a;
   line-height: 40px;
 
   padding-left: 16px;
@@ -418,7 +418,9 @@ footer {
 }
 
 .footer__logo {
-  filter: grayscale(1)
+  filter: grayscale(1);
+  height: 40px;
+  width: 44px;
 }
 
 .footer__logo:hover {
