@@ -107,9 +107,17 @@ footer {
 
 .menu ul {
   list-style-type: none;
+
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+.menu__home-link {
+  width: 70%;
 }
 
 .menu__items {
+  width: 70%;
   height: 100%;
 
   display: flex;
@@ -119,14 +127,16 @@ footer {
 
 .menu__item[href],
 .menu__item[href]:hover {
+  font-size: 14px;;
   color: #fff;
-  line-height: 32px;
+  line-height: 40px;
 }
 
 .menu__subitem[href],
 .menu__subitem[href]:hover {
-  color: var(--regular-text-color);
-  line-height: 32px;
+  font-size: 14px;;
+  color: #848484;
+  line-height: 40px;
 
   padding-left: 16px;
 }
