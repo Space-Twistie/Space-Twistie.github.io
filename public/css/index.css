@@ -260,6 +260,10 @@ footer {
   padding: 30px;
 }
 
+.stack-icons {
+  margin-top: 15px;
+}
+
 .stack-icon {
   display: flex;
   flex-direction: column;
@@ -428,6 +432,10 @@ footer {
     margin: 5px;
   }
 
+  .stack-icon div {
+    font-size: 14px;
+  }
+
   .header {
     flex-direction: column;
   }
@@ -455,10 +463,6 @@ footer {
 
   .info-frame {
     padding: 15px;
-  }
-
-  .stack-icon div {
-    font-size: 14px;
   }
 
   .info_left,
