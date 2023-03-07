@@ -532,5 +532,10 @@ footer {
   .footer__logo {
     filter: none;
   }
+
+  .text-block {
+    text-align: left;
+    align-items: flex-start;
+  }
 }
 
