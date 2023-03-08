@@ -457,6 +457,7 @@ footer {
   }
 
   .stack-icon {
+    width: initial;
     margin: 5px;
   }
 
@@ -522,6 +523,10 @@ footer {
 
   .founder {
     flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .founder__photo {
     margin-bottom: 30px;
   }
 

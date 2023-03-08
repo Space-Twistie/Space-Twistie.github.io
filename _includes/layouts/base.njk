@@ -1,21 +1,21 @@
 <!doctype html>
 <html lang="{{ metadata.language }}">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ title or metadata.title }}</title>
-		<meta name="description" content="{{ description or metadata.description }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
 
     <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-		<link rel="preload"  as="style" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono|Ubuntu+Light&display=swap">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload"  as="style" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300@display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 
-		{%- css %}{% include "public/css/index.css" %}{% endcss %}
+    {%- css %}{% include "public/css/index.css" %}{% endcss %}
 
-		<style>{% getBundle "css" %}</style>
-	</head>
-	<body>
+    <style>{% getBundle "css" %}</style>
+  </head>
+  <body>
     {% include "menu.njk" %}
     <div class="content">
 
@@ -25,5 +25,5 @@
 
       <footer></footer>
     </div>
-	</body>
+  </body>
 </html>
