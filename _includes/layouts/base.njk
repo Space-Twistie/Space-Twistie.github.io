@@ -7,19 +7,19 @@
     <meta name="description" content="{{ description or metadata.description }}">
 
     <meta content="website" property="og:type">
-    <meta content="https://spacetwistie.com/" property="og:url">
-    <meta content="Space Twistie" property="og:site_name">
-    <meta content="Space Twistie   |   Expertise. Transparency. Quality." property="og:title">
-    <meta content="Developing custom web applications of any complexity to meet your unique business needs. We specialize in outsourcing and provide expert assistance to you." property="og:description">
-    <meta content="/img/preview.png" property="og:image">
+    <meta content="{{ metadata.social.url }}" property="og:url">
+    <meta content="{{ metadata.social.siteName }}" property="og:site_name">
+    <meta content="{{ metadata.social.title }}" property="og:title">
+    <meta content="{{ metadata.social.description }}" property="og:description">
+    <meta content="{{ metadata.social.preview }}" property="og:image">
     <meta content="1200" property="og:image:width">
     <meta content="630" property="og:image:height">
 
-    <meta content="https://spacetwistie.com/" name="twitter:site">
+    <meta content="{{ metadata.social.url }}" name="twitter:site">
     <meta content="summary_large_image" name="twitter:card">
-    <meta content="Space Twistie   |   Expertise. Transparency. Quality." name="twitter:title">
-    <meta content="Developing custom web applications of any complexity to meet your unique business needs. We specialize in outsourcing and provide expert assistance to you." name="twitter:description">
-    <meta content="/img/preview.png" name="twitter:image">
+    <meta content="{{ metadata.social.title }}" name="twitter:title">
+    <meta content="{{ metadata.social.description }}" name="twitter:description">
+    <meta content="{{ metadata.social.preview }}" name="twitter:image">
 
     <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
     <link rel="preconnect" href="https://fonts.googleapis.com">
