@@ -1,14 +1,16 @@
+{% from 'image.njk' import image %}
+
 {% macro info(imgSrc, title, text, direction = "left") %}
 <div class="info_{{direction}}">
   {% if direction == "left" %}
-  <img src="{{ imgSrc }}" class="info__img_left" alt="{{ title }}"/>
+    {{ image(imgSrc, title, "info__img_left", "png")}}
   {% endif %}
   <span class="info__text_{{ direction }}">
     <h1>{{ title }}</h1>
     <p>{{ text }}</p>
   </span>
   {% if direction == "right" %}
-  <img src="{{ imgSrc }}" class="info__img_right" alt="{{ title }}"/>
+    {{ image(imgSrc, title, "info__img_right", "png")}}
   {% endif %}
 </div>
 {% endmacro %}

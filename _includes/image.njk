@@ -1,0 +1,6 @@
+{% macro image(imagePath, alt, class, fallbackFormat) %}
+<picture>
+  <source srcset="{{imagePath}}.webp, {{imagePath}}2x.webp 2x" type="image/webp">
+  <img alt="{{alt}}" class="{{class}}" src="{{imagePath}}2x.{{fallbackFormat}}" loading="lazy">
+</picture>
+{% endmacro %}
