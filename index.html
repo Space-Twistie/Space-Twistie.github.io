@@ -53,6 +53,7 @@ body {
   background-color: var(--background-color);
   line-height: 25px;
   height: 100%;
+  margin: 0;
 }
 
 h1,
@@ -206,19 +207,47 @@ footer {
 }
 
 .header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+
   width: 100%;
-  margin-top: 60px;
   margin-bottom: 60px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 56px;
+
+  background: linear-gradient(180deg, #131313 0%, rgba(20, 20, 20, 0) 104.02%);
 }
 
 .header__logo {
-  height: 130px;
-  width: 270px;
+  height: 162px;
+  width: 330px;
 
-  margin-right: 40px;
+  margin-top: 40px;
+
+  grid-column: 1/2;
+  grid-row: 1;
+}
+
+.header__astronauts-container {
+  grid-column: 2;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+
+.header__astronauts {
+  height: 456px;
+  width: 456px;
+}
+
+.header__quote {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+
+  margin-left: 30px;
+
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .header__text {
@@ -231,11 +260,16 @@ footer {
   font-family: monospace;
   font-size: var(--main-text-font-size);
 
-  background-color: #272727;
+  background: #1A1A1A;
+  border: 1px solid #525252;
+
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  grid-row: 3;
 }
 
 .header__command {
-  color: #53C1DE;
+  color: #0495BC;
 }
 
 .header__typing {
@@ -514,17 +548,45 @@ footer {
   }
 
   .header {
-    flex-direction: column;
+    padding: 0;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    grid-gap: 30px;
+    justify-items: center;
+    background: initial;
+  }
+
+  .header__astronauts-container {
+    display: none;
   }
 
   .header__logo {
-    margin: 0 0 60px 0;
+    margin: 60px 0 0 0;
+
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .header__quote {
+    margin: 0;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+
+    text-align: center;
+
+    grid-column: 1;
+    grid-row: 2;
   }
   
   .header__text {
     min-width: 360px;
     line-height: 1.4;
-    padding: 10px;
+    padding: 5px;
+
+    grid-column: 1;
+    grid-row: 3;
   }
 
   .header__text div {
@@ -656,20 +718,33 @@ footer {
 
 
 
+
+
 <header class="header">
   <img src="img/logo.svg" class="header__logo" alt="logo" />
+  <div class="header__quote">
+    We develop custom web applications of any complexity to meet your unique business needs.
+  </div>
 
+  <div class="header__astronauts-container">
+    
+<picture>
+  <source srcset="img/astronauts.webp, img/astronauts2x.webp 2x" type="image/webp">
+  <img alt="astronauts are coding" class="header__astronauts" src="img/astronauts2x.png" loading="lazy">
+</picture>
+
+  </div>
+    
   <div class="header__text">
-      <div><b>>&nbsp;</b><strong class="header__command">whoami</strong></div>
-      <div>Space Twistie develops custom web applications of any complexity to meet your unique business needs. We specialize in outsourcing services and provide expert assistance to help you achieve your goals.</div>
-      <div>
-        <div class="header__typing">
-          <span><b>>&nbsp;</b><strong class="header__command">develop-a-project&nbsp;</strong><strong>--expertise&nbsp;</strong><strong>--transparency&nbsp;</strong><strong>--quality&nbsp;</strong></span>
+    <div><b>>&nbsp;</b><strong class="header__command">uname -a</strong></div>
+    <div>Space Twistie is a company that provides support for the creation of web applications, no matter the level of complexity.</div>
+    <div>
+      <div class="header__typing">
+        <span><b>>&nbsp;</b><strong class="header__command">develop-a-project&nbsp;</strong><strong>--expertise&nbsp;</strong><strong>--transparency&nbsp;</strong><strong>--quality&nbsp;</strong></span>
         </div>
-      </div>
+    </div>
   </div>
 </header>
-
 
 <div class="content-block">
   <div class="text-block">
