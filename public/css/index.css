@@ -525,6 +525,7 @@ footer {
     grid-auto-rows: auto;
     grid-gap: 30px;
     justify-items: center;
+    background: initial;
   }
 
   .header__astronauts-container {
@@ -554,7 +555,7 @@ footer {
   .header__text {
     min-width: 360px;
     line-height: 1.4;
-    padding: 10px;
+    padding: 5px;
 
     grid-column: 1;
     grid-row: 3;
