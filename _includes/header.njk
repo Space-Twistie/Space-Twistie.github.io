@@ -1,0 +1,22 @@
+{% from 'image.njk' import image %}
+
+<header class="header">
+  <img src="img/logo.svg" class="header__logo" alt="logo" />
+  <div class="header__quote">
+    We develop custom web applications of any complexity to meet your unique business needs.
+  </div>
+
+  <div class="header__astronauts-container">
+    {{ image("img/astronauts", 'astronauts are coding', "header__astronauts", "png")}}
+  </div>
+    
+  <div class="header__text">
+    <div><b>>&nbsp;</b><strong class="header__command">uname -a</strong></div>
+    <div>Space Twistie is a company that provides support for the creation of web applications, no matter the level of complexity.</div>
+    <div>
+      <div class="header__typing">
+        <span><b>>&nbsp;</b><strong class="header__command">develop-a-project&nbsp;</strong><strong>--expertise&nbsp;</strong><strong>--transparency&nbsp;</strong><strong>--quality&nbsp;</strong></span>
+        </div>
+    </div>
+  </div>
+</header>
